@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>haha</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+	<div id="center">
+		<img src="./1.jpg"/>
+	</div>
+	
+</body>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  jQuery.fn.center = function () {
+        this.css("position","absolute");
+              this.css("top", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + "px");
+                    this.css("left", ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + "px");
+                          return this;
+  }
+  $("#center").center();
+});
+</script>
+</html>
